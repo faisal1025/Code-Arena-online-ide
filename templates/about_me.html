@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block title %}
+About me
+{% endblock title %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about_me.css') }}">
+
+<div class="container">
+    <div class="contact">
+        <label class="lable">Connect with me:</label>
+        <a href="https://www.linkedin.com/in/faisal-azmi-890427207/" class="icon">
+            <img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialsthemeuplift/public/images/social-icons/linkedin.svg" class="social-icon h-p-0-lg h-mb-3-lg lazyloaded" alt="LinkedIn logo" data-ll-status="loaded">
+        </a>
+        <a href="mailto:faisalprofessional1@gmail.com" class="icon">
+            <img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialsthemeuplift/public/images/social-icons/mail.svg" class="social-icon h-p-0-lg h-mb-3-lg lazyloaded" alt="Email icon" data-ll-status="loaded">
+        </a>
+        <a href="https://www.instagram.com/faisalazmi09/" class="icon">
+            <img src="http://sguru.org/wp-content/uploads/2018/01/logo-app-pictures-photo-network-instagram-social-icon.png" class="social-icon h-p-0-lg h-mb-3-lg lazyloaded" alt="instagram icon" data-ll-status="loaded" id="insta_img">
+        </a>
+    </div>
+
+    <section class="content" id="first">
+        <h1 class="first" id="first_heading">About me</h1>
+
+        <div class="first" id="first_text">
+            <img src=" {{ url_for('static', filename='assets/left_quotation.png') }} " alt="left_quotation"
+                class="first" id="left_quotation" />
+            <p id="text">
+                Hello world, I am Faisal Azmi currently persuing B.tech(Bachelor of Technology)
+                in computer science branch. I am a passionate learner, a developer and a self-motivated competitive
+                programmer. I have built various projects on python worked with some most powerful python modules
+                like pygame, pyqt5 to built UI based applications. I really enjoy developing these types of UI based
+                applications like <em>Code Arena</em> which is developed in flask a python web framework. As learing is my priority
+                and development is my hobby, it teaches me alot while developing this platform <em>Code Arena</em>. The best way to
+                learn something is to start working on it.
+            </p>
+            <p id="text2">
+                Happy coding ;)
+            </p>
+            <img src=" {{ url_for('static', filename='assets/right_quotation.png') }} " alt="right_quotation"
+                class="first" id="right_quotation" />
+        </div>
+
+        <section class="whole-pic">
+            <img src=" {{ url_for('static', filename='assets/myPicture.jpg') }} " alt="profile pic" class="first"
+                    id="myPicture" />
+            <br/>
+            <span class="name" >FAISAL AZMI</span>
+            <br/>
+            <span class="post" >Software developer</span>
+
+        </section>
+    </section>
+
+    <section class="content">
+        <h1 class="second" id="second_heading">
+            My Recent Projects
+        </h1>
+        <p class="second" id="second_text">
+            Recently, I have worked on two projects one is a path finder visualizer tool 
+            through A* path finding algorithm and pygame and the second one is a game project 
+            with the help of a python module pygame which is a very powerful module for 2-D games.
+            Github links are below.
+        </p>
+        <ol class="projects">
+            <li class="myProject">
+                <h5>A* path finding visualizer</h5>
+                <a href="https://github.com/faisal1025/A--path-finder-visualizer"><img src=" {{ url_for('static', filename='assets/path_finding.png') }} " class="rounded float-left" alt="path finder" id="path_finder_img"></a>
+                <figcaption class="caption" >A* Path finder algorithm(<a href="https://github.com/faisal1025/A--path-finder-visualizer">link</a>)</figcaption>
+            </li>
+            <li class="myProject">
+                <h5>Pygame (space shooter)</h5>
+                <a href="https://github.com/faisal1025/pygame-beginner"><img src=" {{ url_for('static', filename='assets/space_shooter.png') }} " class="rounded float-right" alt="space shooter" id="space_shooter"></a>
+                <figcaption class="caption">Space Shooter(<a href="https://github.com/faisal1025/pygame-beginner">link</a>)</figcaption>
+            </li>
+        </ol>
+    </section>
+    <section class="content">
+        <h1 class="third" id="third_heading">
+            My Upcoming Projects
+        </h1>
+        <p class="third" id="third_text">
+            Currently, I am working on this platform <em>Code Arena</em> to built it an
+            online judge. So that our users could practice DS & Algo to improve there skills 
+            and code arena will conduct it's own contest to test your skills. It will give
+            you better experience and a lot of practice to crack real coding rounds.  
+        </p>
+        <p id="third_text2">
+            You can support me by contributing in my projects. Your efforts will be 
+            valuable for me. <a href="#">click here</a> to contribute.
+        </p>
+    </section>
+</div>
+
+
+
+
+
+
+{% endblock body %}

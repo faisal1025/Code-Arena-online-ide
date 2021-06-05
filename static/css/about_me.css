@@ -1,0 +1,129 @@
+section.content{
+    margin: 15px 0px;
+    padding: 10px;
+    clear: both;
+    overflow: auto;
+}
+/* ------------------------------------for section first-------------------------- */
+.first{
+    margin: 10px 4px;
+}
+h1#first_heading{
+    color: teal;
+    font-family: -webkit-pictograph;
+    background: antiquewhite;
+    width: auto;
+}
+.whole-pic{
+    display: inline;
+    text-align: center;
+}
+span.name{
+    display: inline;
+    margin: 8%;
+    font-size: xx-large;
+}
+span.post{
+    display: inline;
+    margin: 10%;
+    font-size:inherit;
+}
+img#myPicture{
+    width: 32%;
+    border: 2px solid gray;
+    border-radius: 77px;
+    margin-top: 6%;
+}
+div#first_text{
+    width: 66%;
+    float: right;
+}
+img#left_quotation{
+    width: 115px;
+}
+img#right_quotation{
+    width: 100px;
+    float: right;
+}
+p#text{
+    padding: 4%;
+    font-size: large;
+    font-weight: bold;
+    font-family: monospace;
+}
+p#text2{
+    padding: 0% 4%;
+    font-size: large;
+    font-weight: bold;
+    font-family: monospace;
+}
+/* -----------------------------for second section------------------------------- */
+.second{
+    margin: 10px 4px;
+}
+h1#second_heading{
+    color: teal;
+    font-family: -webkit-pictograph;
+    background: antiquewhite;
+    width: auto;
+}
+p#second_text{
+    font-family: monospace;
+    font-size: large;
+}
+ol.projects{
+    overflow: auto;
+    border: 2px solid gray;
+}
+li.myProject{
+    font-size: large;
+    font-weight: 500;
+    float: left;
+    margin: 3% 8%;
+}
+img#space_shooter, img#path_finder_img{
+    opacity: 0.8;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+img#space_shooter:hover, img#path_finder_img:hover{
+    opacity: 1;
+}
+figcaption.caption{
+    font-weight: 400;
+    font-size: revert;
+    text-align: center;
+}
+/* ------------------------------my upcoming project------------------------------ */
+
+.third{
+    margin: 10px 4px;
+}
+h1#third_heading{
+    color: teal;
+    font-family: -webkit-pictograph;
+    background: antiquewhite;
+    width: auto;
+}
+p#third_text, p#third_text2{
+    font-family: monospace;
+    font-size: large;
+}
+img#insta_img{
+    width: 29px;
+}
+.contact{
+    text-align: right;
+    padding: 4px;
+}
+label.lable{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: brown;
+}
+a.icon{
+    margin: 6px;
+}
+

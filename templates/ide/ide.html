@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    ide
+{% endblock title %}
+
+{% block body %}
+    <div class="container">
+        <div class="header">Code Arena online IDE</div>
+        <div class="control-panel">
+            Theme:
+            <select id="theme" class="theme" onchange="changetheme()">
+                <option value="ace/theme/monokai" selected>Monokai</option>
+                <option value="ace/theme/solarized_light" >light</option>
+                <option value="ace/theme/tomorrow_night_blue" >Night_blue</option>
+            </select>
+            
+            </select>
+            Select Language:
+            <select id="languages" class="languages" onchange="changelanguage()">
+                <option value="c">C</option>
+                <option value="cpp">C++</option>
+                <option value="py">Python 3.8</option>
+            </select>
+        </div>
+        <div class="editor" id="editor"></div>
+
+        <div class="button-container">
+            <input type="checkbox" class="button" onclick="ischecked(this)">Custom Input
+            <button class="btn btn-primary button" onclick="runCode()">Run</button>
+        </div>
+        
+        <div class="inputSection">
+            <h5>Input</h5>
+            <textarea name="input" class="input" rows="3" cols="40"></textarea>
+        </div>
+
+        <div class="outputSection">
+            <h5>Output</h5>
+            <div class="output"></div>
+        </div>
+    </div>
+    
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='ide/lib/ace.js') }} "></script>
+    <script src=" {{ url_for('static', filename='ide/lib/theme-monokai.js') }} "></script>
+    <script src=" {{ url_for('static', filename='ide/lib/theme-solarized_light.js') }} "></script>
+    <script src=" {{ url_for('static', filename='ide/lib/theme-tomorrow_night_blue.js') }} "></script>
+    <script src="{{ url_for('static', filename='ide/ide.js') }}"></script>
+{% endblock body %}

@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box; 
+}
+
+section h1{
+    text-align: center;
+    color:brown ;
+    font-family: cursive;
+}
+
+section.about{
+    margin: 50px 0px;
+}
+/* -----------------------------------For Welcome-------------------------------- */
+section p#welcometext{
+    margin: 25px 0px;
+    font-size: larger;
+    width: 69%;
+    display: inline-block;
+    font-family: monospace;
+}
+
+section img#welcomepic{
+    float: right;
+    width: 31%;
+    padding: 5px;
+    margin: 12px 0px;
+}
+
+/* ---------------------------------For CustomInput---------------------------- */
+
+section p#custominputtext{
+    margin: 25px 0px;
+    font-size: larger;
+    font-family: monospace;
+}
+
+section img#custominputpic{
+    width: 100%;
+    border: ridge;
+    margin: 10px 0px;
+}
+
+/* ----------------------------------Our ambition-------------------------------- */
+
+section p#ourambitiontext{
+    margin: 25px 0px;
+    font-size: larger;
+    font-family: monospace;
+}
+
+section p#ourambitiontext2{
+    margin: 25px 0px;
+    font-size: larger;
+    font-family: monospace;
+}
+
