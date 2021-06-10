@@ -1,0 +1,76 @@
+.header{
+    margin-top: 60px;
+    background-color: rgb(235, 193, 137);
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding: 4px;
+    font-family: cursive;
+}
+
+.control-panel{
+    background-color: lightgray;
+    text-align: right;
+    padding: 4px;
+    font-family: cursive;
+}
+
+.languages{
+    background: white;
+    border: 1px solid grey;
+}
+
+.editor{
+    height: 400px;
+    font-size: 15px;
+}
+
+.button-container{
+    text-align: right;
+    padding: 3px 4px;
+    font-weight: 500;
+    font-size: large;
+}
+
+.button{
+    margin:4px 7px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.inputSection
+    .input{
+        padding: 4px;
+        min-height: 100px;
+        width: 99%;
+        margin: 5px;
+        border: 2px solid grey;
+    }
+.inputSection
+    h5{
+        font-family:cursive;
+        color: teal;
+        margin: 5px;
+        padding: 4px;
+    }
+
+.outputSection{
+    margin:15px 0px;
+}
+.outputSection
+    h5{
+        font-family: cursive;
+        color: teal;
+        margin: 5px;
+        padding: 4px;   
+    }
+.outputSection
+    .output{
+        padding: 4px;
+        min-height: 100px;
+        width: 99%;
+        margin: 9px 5px;
+        border: 2px solid grey;
+        cursor:default;
+}
+
