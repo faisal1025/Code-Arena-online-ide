@@ -1,6 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, session, flash
-from flask_sqlalchemy import SQLAlchemy
-import secrets, random, string, subprocess, sys, os
+from flask import Flask, render_template, request
+import random, string, subprocess, sys, os
 
 app = Flask(__name__)
 
@@ -86,5 +85,5 @@ def aboutme():
     return render_template("about_me.html")
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=1000)
         

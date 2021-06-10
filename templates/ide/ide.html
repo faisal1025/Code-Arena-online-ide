@@ -5,6 +5,9 @@
 {% endblock title %}
 
 {% block body %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='ide/ide.css') }}">
+
     <div class="container">
         <div class="header">Code Arena online IDE</div>
         <div class="control-panel">
@@ -26,6 +29,9 @@
         <div class="editor" id="editor"></div>
 
         <div class="button-container">
+            <span class="d-none" id="loader">
+                <i class="fa fa-spinner fa-spin" style="font-size:20px"></i>Running
+            </span>
             <input type="checkbox" class="button" onclick="ischecked(this)">Custom Input
             <button class="btn btn-primary button" onclick="runCode()">Run</button>
         </div>
@@ -37,7 +43,7 @@
 
         <div class="outputSection">
             <h5>Output</h5>
-            <div class="output"></div>
+            <textarea class="output" readonly></textarea>
         </div>
     </div>
     
