@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import random, string, subprocess, sys, os
 
 app = Flask(__name__)
-
+server = app.server
 
 #for ide
 @app.route('/')
