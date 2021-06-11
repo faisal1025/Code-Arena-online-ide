@@ -1,3 +1,1 @@
 python-3.9.5
-setuptools-57.0.0
-pip-21.1.2
