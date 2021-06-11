@@ -1,11 +1,14 @@
-from flask import Flask, render_template, request
-import random, string, subprocess, sys, os
+from flask import Flask, render_template, request, flash
+import random, string, subprocess, sys, os, secrets
 
 app = Flask(__name__)
+secret = secrets.token_urlsafe(16)
+app.secret_key = secret
 
 #for ide
 @app.route('/')
 def ide():
+    flash("Note: C and C++ codes can't be run temprorily. Sorry for inconvenience")
     return render_template('ide/ide.html')
 
 #for compiler
