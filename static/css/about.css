@@ -5,7 +5,13 @@
 section h1{
     text-align: center;
     color:brown ;
-    font-family: cursive;
+    font-family:unset;
+    margin: auto;
+}
+
+.heading{
+    text-align: center;
+    padding: 4px;
 }
 
 section.about{

@@ -8,7 +8,7 @@ app.secret_key = secret
 #for ide
 @app.route('/')
 def ide():
-    flash("Note: C and C++ codes can't be run temprorily. Sorry for inconvenience")
+    flash("Note: C and C++ codes can't be run temprorily. Sorry for inconvenience :(")
     return render_template('ide/ide.html')
 
 #for compiler

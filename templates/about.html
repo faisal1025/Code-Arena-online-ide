@@ -9,7 +9,10 @@ About us
 
 <div class="container">
     <section class="about" id="welcomenote">
-        <h1>Welcome to Code Arena</h1>
+        <div class="heading">
+            <h1 style="display:inline; margin-bottom: 4px;">Welcome to </h1>
+            <img style="width: 20%;" src=" {{ url_for('static', filename='assets/logo.png') }} " alt="logo" id="welcomelogo">
+        </div>
         <div class="content">
             <img src="{{ url_for('static', filename='assets/welcome1.gif') }} " alt="code hard" id="welcomepic">
             <p class="text" id="welcometext">
