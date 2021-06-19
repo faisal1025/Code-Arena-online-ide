@@ -8,7 +8,6 @@ app.secret_key = secret
 #for ide
 @app.route('/')
 def ide():
-    flash("Note: C and C++ codes can't be run temprorily. Sorry for inconvenience :(")
     return render_template('ide/ide.html')
 
 #for compiler
@@ -35,7 +34,7 @@ def compiler():
             stdout, stderr = exe.communicate()
             if exe.returncode == 0:
                 sys.stdin = open(inputFile, 'r')
-                CompletedProcess = subprocess.run('./a.exe', capture_output=True, text=True, stdin=sys.stdin)
+                CompletedProcess = subprocess.run('./a.out', capture_output=True, text=True, stdin=sys.stdin)
                 sys.stdin.close()
                 output = CompletedProcess.stdout
                 os.remove(file)
@@ -47,11 +46,11 @@ def compiler():
 
 
         if language == 'cpp':
-            exe = subprocess.Popen(["g++", file], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+            exe = subprocess.Popen(["g++", file ], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
             stdout, stderr = exe.communicate()
             if exe.returncode == 0:
                 sys.stdin = open(inputFile, 'r')
-                CompletedProcess = subprocess.run('./a.exe', capture_output=True, text=True, stdin=sys.stdin)
+                CompletedProcess = subprocess.run('./a.out', capture_output=True, text=True, stdin=sys.stdin)
                 sys.stdin.close()
                 output = CompletedProcess.stdout
                 os.remove(file)
@@ -64,7 +63,7 @@ def compiler():
 
         if language == 'py':
             sys.stdin = open(inputFile, 'r')
-            CompletedProcess = subprocess.run(['python', file], capture_output=True, text=True, stdin=sys.stdin)
+            CompletedProcess = subprocess.run(['python3', file], capture_output=True, text=True, stdin=sys.stdin)
             sys.stdin.close()
             if CompletedProcess.returncode == 0:
                 output = CompletedProcess.stdout
@@ -87,5 +86,5 @@ def aboutme():
     return render_template("about_me.html")
 
 if __name__ == "__main__":
-    app.run(debug=True, port=1000)
+    app.run(debug=False, host="0.0.0.0", port=80)
         
