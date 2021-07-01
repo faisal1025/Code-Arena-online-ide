@@ -9,31 +9,36 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='ide/ide.css') }}">
 
     <div class="container">
+
         <div class="welcomeNote">
             <div id="heading">
                 <h1>Welcome to</h1>
-                <img src=" {{ url_for('static', filename='assets/logo.png') }} " alt="logo">
+                <img style="width:12rem" src=" {{ url_for('static', filename='assets/logo.png') }} " alt="logo">
             </div>
             <p>Code, Compile and Run faster</p>
         </div>
+
         {% include 'message.html' %}
         <div class="header">Code Arena online IDE</div>
         <div class="control-panel">
-            Theme:
-            <select id="theme" class="theme" onchange="changetheme()">
-                <option value="ace/theme/monokai" selected>Monokai</option>
-                <option value="ace/theme/solarized_light" >light</option>
-                <option value="ace/theme/tomorrow_night_blue" >Night_blue</option>
-            </select>
-            
-            </select>
-            Select Language:
-            <select id="languages" class="languages" onchange="changelanguage()">
-                <option value="c" >C</option>
-                <option value="cpp">C++</option>
-                <option value="py">Python 3.8</option>
-            </select>
+            <div id="themes">
+                <label>Theme:</label>
+                <select id="theme" class="theme" onchange="changetheme()">
+                    <option value="ace/theme/monokai" selected>Monokai</option>
+                    <option value="ace/theme/solarized_light" >light</option>
+                    <option value="ace/theme/tomorrow_night_blue" >Night_blue</option>
+                </select>
+            </div>
+            <div id="lang">
+                <label>Select Language:</label>
+                <select id="languages" class="languages" onchange="changelanguage()">
+                    <option value="c" >C</option>
+                    <option value="cpp">C++</option>
+                    <option value="py">Python 3.8</option>
+                </select>
+            </div>
         </div>
+
         <div class="editor" id="editor"></div>
 
         <div class="button-container">

@@ -5,8 +5,15 @@ section.content{
     overflow: auto;
 }
 /* ------------------------------------for section first-------------------------- */
+.first-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .first{
-    margin: 10px 4px;
+    margin: auto;
 }
 h1#first_heading{
     color: teal;
@@ -15,28 +22,29 @@ h1#first_heading{
     width: auto;
 }
 .whole-pic{
-    display: inline;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
 }
 span.name{
     display: inline;
-    margin: 8%;
+    margin: 0px auto;
     font-size: xx-large;
 }
 span.post{
     display: inline;
-    margin: 10%;
-    font-size:inherit;
+    margin: 0px auto;
+    font-size: inherit;
 }
 img#myPicture{
-    width: 32%;
+    width: 17em;
     border: 2px solid gray;
     border-radius: 77px;
     margin-top: 6%;
 }
 div#first_text{
     width: 66%;
-    float: right;
 }
 img#left_quotation{
     width: 115px;
@@ -118,6 +126,7 @@ img#insta_img{
 .contact{
     text-align: right;
     padding: 4px;
+    font-size: smaller;
 }
 label.lable{
     font-family:Verdana, Geneva, Tahoma, sans-serif;

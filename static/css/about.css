@@ -18,19 +18,31 @@ section.about{
     margin: 50px 0px;
 }
 /* -----------------------------------For Welcome-------------------------------- */
+#first-content{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 section p#welcometext{
-    margin: 25px 0px;
+    margin: auto;
     font-size: larger;
-    width: 69%;
-    display: inline-block;
+    width: 45rem;
+    display: flex;
     font-family: monospace;
 }
 
+@media  screen and (width:1024px) {
+    section p#welcometext{
+        width: 36rem;
+    }   
+}
+
 section img#welcomepic{
-    float: right;
-    width: 31%;
-    padding: 5px;
-    margin: 12px 0px;
+    width: 20rem;
+    display: flex;
+    margin: 1rem;
+    border-radius: 1rem;
 }
 
 /* ---------------------------------For CustomInput---------------------------- */

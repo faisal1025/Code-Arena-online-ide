@@ -2,6 +2,9 @@
     margin: 10px;
     background-color: azure;
     padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 .welcomeNote #heading{
     text-align: center;
@@ -31,6 +34,9 @@
     text-align: right;
     padding: 4px;
     font-family: cursive;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
 }
 
 .languages{

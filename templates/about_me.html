@@ -23,35 +23,37 @@ About me
 
     <section class="content" id="first">
         <h1 class="first" id="first_heading">About me</h1>
+        <div class="first-content">
 
-        <div class="first" id="first_text">
-            <img src=" {{ url_for('static', filename='assets/left_quotation.png') }} " alt="left_quotation"
-                class="first" id="left_quotation" />
-            <p id="text">
-                Hello world, I am Faisal Azmi currently persuing B.tech(Bachelor of Technology)
-                in computer science branch. I am a passionate learner, a developer and a self-motivated competitive
-                programmer. I have built various projects on python worked with some most powerful python modules
-                like pygame, pyqt5 to built UI based applications. I really enjoy developing these types of UI based
-                applications like <em>Code Arena</em> which is developed in flask a python web framework. As learing is my priority
-                and development is my hobby, it teaches me alot while developing this platform <em>Code Arena</em>. The best way to
-                learn something is to start working on it.
-            </p>
-            <p id="text2">
-                Happy coding ;)
-            </p>
-            <img src=" {{ url_for('static', filename='assets/right_quotation.png') }} " alt="right_quotation"
-                class="first" id="right_quotation" />
+            <section class="whole-pic">
+                <img src=" {{ url_for('static', filename='assets/myPicture.jpg') }} " alt="profile pic" class="first"
+                        id="myPicture" />
+                <span class="name" >FAISAL AZMI</span>
+                <span class="post" >Python developer</span>
+    
+            </section>
+
+            <div class="first" id="first_text">
+                <img src=" {{ url_for('static', filename='assets/left_quotation.png') }} " alt="left_quotation"
+                    class="first" id="left_quotation" />
+                <p id="text">
+                    Hello world, I am Faisal Azmi currently persuing B.tech(Bachelor of Technology)
+                    in computer science branch. I am a passionate learner, a developer and a self-motivated competitive
+                    programmer. I have built various projects on python worked with some most powerful python modules
+                    like pygame, pyqt5 to built UI based applications. I really enjoy developing these types of UI based
+                    applications like <em>Code Arena</em> which is developed in flask a python web framework. As learing is my priority
+                    and development is my hobby, it teaches me alot while developing this platform <em>Code Arena</em>. The best way to
+                    learn something is to start working on it.
+                </p>
+                <p id="text2">
+                    Happy coding ;)
+                </p>
+                <img src=" {{ url_for('static', filename='assets/right_quotation.png') }} " alt="right_quotation"
+                    class="first" id="right_quotation" />
+            </div>
+
         </div>
 
-        <section class="whole-pic">
-            <img src=" {{ url_for('static', filename='assets/myPicture.jpg') }} " alt="profile pic" class="first"
-                    id="myPicture" />
-            <br/>
-            <span class="name" >FAISAL AZMI</span>
-            <br/>
-            <span class="post" >Python developer</span>
-
-        </section>
     </section>
 
     <section class="content">

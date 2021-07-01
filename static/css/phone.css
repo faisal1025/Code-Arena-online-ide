@@ -1,0 +1,33 @@
+/*-------------------------------- footer style---------------------------------- */
+.upper{
+    height: auto;
+    display: flex;
+    align-items:baseline;
+}
+
+footer img.logo {
+    height: auto;
+    width: 8rem;
+    margin-top: 3%;
+}
+
+ul.footermenu{
+    display: flex;
+    list-style: none;
+    margin: 0px 0px;
+    height: fit-content;
+    flex: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: end;
+}
+
+ul#lowerlist{
+    list-style: none;
+    display: flex;
+    flex: auto;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+/* ---------------------------About me phone style---------------------------------  */
