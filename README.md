@@ -4,4 +4,4 @@ This is a an online multi-language ide. It enables you to run your execute your 
 ![custom input](https://user-images.githubusercontent.com/75746412/136219626-7269c105-d1eb-46f2-8eb3-10330bbf4359.png)
 
 # Steps to contribute
-Be sure that you have a python interpreter version 3.8 or above. If not link is [download](https://www.python.org/downloads/) from here.<a href="doc:introduction" target="_blank">Introduction</a>
+Be sure that you have a python interpreter version 3.8 or above. If not link is <a href="https://www.python.org/downloads/" target="_blank">download</a> from here. 
