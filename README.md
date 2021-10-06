@@ -1,5 +1,5 @@
 # Code-Arena-online-ide
-This is a an online multi-language ide. It enables you to run your execute your code faster with your own testcases input. It is built in flask framework the framework is beginner friendly. It supports three languages c, c++, python 3.9 . It makes enjoyable to code and execute any time any where. 
+This is a an online multi-language ide. It enables you to run your execute your code faster with your own testcases input. It is built in flask framework the framework is beginner friendly. It supports three languages c, c++, python 3.9 . It makes enjoyable to code, execute and run any time any where. 
 
 ![custom input](https://user-images.githubusercontent.com/75746412/136219626-7269c105-d1eb-46f2-8eb3-10330bbf4359.png)
 
