@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}
+About us
+{% endblock title %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+
+<div class="container">
+    <section class="about" id="welcomenote">
+        <div class="heading">
+            <h1 style="display:inline; margin-bottom: 1rem;">Welcome to </h1>
+            <img style="width: 12rem;" src=" {{ url_for('static', filename='assets/logo.png') }} " alt="logo" id="welcomelogo">
+        </div>
+        <div class="content" id="first-content" >
+            
+            <p class="text" id="welcometext">
+                Code Arena is a coding platform to develop your curiosity in coding. It is a online
+                platform which enables you to run your code online
+                with out the need of Laptop or PC(Personal Computer). It has a Multi-Language text editor which supports
+                languages like C, C++ and Python. It is built in very
+                efficient manner that it will execute your code much faster and display the output as well as error if any
+                bug found on the output area. It enables you to
+                give a custom input in the input area if your code needs input to execute.
+            </p>
+
+            <img src="{{ url_for('static', filename='assets/welcome1.gif') }} " alt="code hard" id="welcomepic">
+
+        </div>
+
+    </section>
+
+    <section class="about" id="custominputnote">
+        <h1>About Custom Input and Working</h1>
+        <div class="content">
+            <p class="text" id="custominputtext">
+                Custom Inputs are the inputs given by the user to run your the code if
+                the code require user input. To give the user input first check the
+                custom input checkbox the input section will appear on screen. 
+                <img src=" {{ url_for('static', filename='assets/custom input.png') }} " alt="custominput-pic1" id="custominputpic"/>
+                Enter your input in the input box and click on run button. Bingo! Your code starts 
+                running the output will be shown in the output box. If there is any error in 
+                your code it will also shown in the output box.
+            </p> 
+            
+        </div>
+    </section>
+        
+
+    <section class="about" id="endnote">
+        <h1>Our Ambitions</h1>
+        <div class="content">
+            <p class="text" id="ourambitiontext">
+                I am trying to create a change over those children who are too passionate
+                for coding but they don't have much resources like computer or smart phone
+                to start. This is an online IDE which enables you to code without PC or
+                Laptop accessible through any mobile phone that having internet connection.
+                The best way to learn something is to start working on that, your mistakes 
+                will automatically teaches you a lot.  
+            </p>
+            <p class="text" id="ourambitiontext2">
+                I hope you like my initiative. Happy coding ;-) .
+            </p>
+
+        </div>
+    </section>
+
+
+</div>
+
+
+
+
+
+
+{% endblock body %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{session.name}}
+{% endblock title %}
+
+{% block body %}
+<link rel="stylesheet" href="/static/css/user/dashboard.css">
+
+    <div class="container">
+        {% include 'message.html' %}
+        <div class="layout1">
+            <section class="left">
+                <label for="image" id="img">
+                    <i class="fas fa-camera" style="margin: 7rem;"></i>
+                </label>
+                <input type="file"  name="img" id="image" >
+            </section>
+            <section class="right">
+                <h2>{{session.name}}</h2>
+                <div class="college mb-2">
+                    <!-- {% if session.occupation == 'student' %} -->
+                        <i class="fas fa-university"></i>
+                        Studing at {{session.education}}                    
+                    <!-- {% else %} -->
+
+                    <!-- {% endif %} -->
+                </div>
+                <div class="user-details">
+                    
+                        <div class="skills mb-2">
+                            <label class="col-sm-2" for="skill">Skills: </label>
+                            <span class="value">{{session.language}}</span>
+                        </div>
+                        
+                        <div class="education">
+                            <label class="col-sm-2" for="education">Education: </label>
+                            <span class="value">{{session.education}}</span>
+                        </div>
+                </div>
+
+            </section>
+        </div>
+
+    </div>
+{% endblock body %}

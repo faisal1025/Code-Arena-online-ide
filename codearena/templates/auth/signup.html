@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    signup
+{% endblock title %}
+
+{% block body %}
+<link rel="stylesheet" href="static/css/auth/signup.css">
+
+<!-- signup form start here -->
+<div class="signup-background">
+  {% include 'message.html' %}
+    <div class=" whole-form">
+        <strong><h2 class="m-4" id="signup-heading">Sign-Up</h2></strong>
+        <form class="signup-form m-4" action="/signup" method="POST">
+    
+            <div class="row mb-4">
+              <label for="uname" class="col-sm-4 col-form-label">User Name</label>
+              <div class="col-sm-15">
+                <input type="text" name="user_name" class="form-control" id="uname" required>
+              </div>
+            </div>
+    
+            <div class="row mb-4">
+              <label for="fullname" class="col-sm-4 col-form-label">Full Name</label>
+              <div class="col-sm-15">
+                <input type="text" name="full_name" class="form-control" id="fullname" required>
+              </div>
+            </div>
+    
+            <div class="row mb-4">
+              <label for="email" class="col-sm-4 col-form-label">Email</label>
+              <div class="col-sm-15">
+                <input type="email" class="form-control" name="email" id="email" required>
+              </div>
+            </div>
+    
+            <div class="row mb-4">
+              <label for="password" class="col-sm-4 col-form-label">Password</label>
+              <div class="col-sm-15">
+                <input type="password" class="form-control" name="password" id="password" required>
+              </div>
+            </div>
+
+            <div class="row mb-4">
+              <label for="confpassword" class="col-sm-8 col-form-label">Confirm Password</label>
+              <div class="col-sm-15">
+                <input type="password" class="form-control" name="confpassword" id="confpassword" required>
+              </div>
+            </div>
+    
+            <fieldset class="row mb-4">
+              <legend class="col-form-label col-sm-4 pt-0">Gender</legend>
+              <div class="col-sm-15">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="maleid" value="male" >
+                  <label class="form-check-label" for="gridRadios1">
+                    Male
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="femaleid" value="female">
+                  <label class="form-check-label" for="gridRadios2">
+                    Female
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="otherid" value="other">
+                  <label class="form-check-label" for="gridRadios3">
+                    Other
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+    
+            <div class="row mb-4">
+              <label for="city" class="col-sm-4 col-form-label">City</label>
+              <div class="col-sm-15">
+                <input type="text" class="form-control" name="city" id="city" required>
+              </div>
+            </div>
+    
+            <fieldset class="row mb-4">
+              <legend class="col-form-label col-sm-4 pt-0">Occupation</legend>
+              <div class="col-sm-15">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="occupation" id="gridRadios1" value="student" >
+                  <label class="form-check-label" for="gridRadios1">
+                    Student
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="occupation" id="gridRadios2" value="Professional">
+                  <label class="form-check-label" for="gridRadios2">
+                    Professional
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="occupation" id="gridRadios3" value="other">
+                  <label class="form-check-label" for="gridRadios3">
+                    Other
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+    
+            <div class="row mb-4">
+              <label for="work" class="col-sm-8 col-form-label">College/Company</label>
+              <div class="col-sm-15">
+                <input type="text" class="form-control" name="work" id="work" required>
+              </div>
+            </div>
+    
+            <div class="row mb-4">
+              <label for="language" class="col-sm-8 col-form-label">Programming Language</label>
+              <div class="col-sm-15">
+                <select size="3" multiple name="language" id="language" required>
+                  <option>--select your languages--</option>
+                  <option value="c">C language</option>
+                  <option value="c++">cpp</option>
+                  <option value="python">Python 3.8</option>
+                  <option value="c#">c#</option>
+                  <option value="ruby on rails">Ruby</option>
+                  <option value="scala">Scala</option>
+                </select>           
+              </div>
+            </div>
+    
+            <button type="submit" class="btn btn-primary ">Sign up</button>
+        </form>
+        <div class="bottom-form m-4" style="text-align:center;">Already have an account? <a href="/login">Login</a></div>
+      </div>
+
+</div>
+
+
+
+
+
+
+{% endblock body %}

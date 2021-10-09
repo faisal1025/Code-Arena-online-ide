@@ -1,0 +1,14 @@
+.main-body{
+    padding: 3rem;
+}
+
+.main-content{
+    min-height: 50rem;
+    border: 2px solid grey;
+}
+
+section.first{
+    width: 70%;
+    border-right: 2px solid grey;
+}
+

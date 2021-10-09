@@ -1,0 +1,39 @@
+/* ----------------------------------main-section-----------------------------------*/
+.layout1{
+    border: 2px solid grey;
+    display: flex;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+/* ------------------------------------left------------------------------------------ */
+.left{
+    width: 19rem;
+}
+
+.left #img{
+    height: 15rem;
+    width: 15rem;
+    border: 2px solid grey;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+.left #img:hover{
+    background-color: lightslategray;
+}
+
+.left #image{
+    display: none;
+    visibility: hidden;
+}
+
+/* -----------------------------------right-------------------------------------- */
+.right{
+    padding: inherit;
+}
+
+.right h2{
+    font-family: 'Ubuntu', sans-serif;
+}

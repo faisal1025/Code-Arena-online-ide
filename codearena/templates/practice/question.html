@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    coding problem
+{% endblock title %}
+
+{% block body %}
+<link rel="stylesheet" href="/static/css/practice/question.css">
+
+    <div class="main-body">
+        <div class="container">
+            <h1 class="questitle">{{problem.name}}
+                <span style="font-size:small;">
+                    Problem code : <strong>{{problem.code}}</strong>
+                </span>
+                <a href="/" type="button" class="btn btn-primary" style="float: right;">Submit</a>
+            </h1>
+            <hr>
+            <section class="one" id="first" style="width: 70%;">
+                <div class="statement">
+                    <h2>Problem Statement</h2>
+                    <div class="content">
+                        {{problem.statement}}
+                    </div>
+                </div>
+                
+                <hr/>
+                
+                <div class="input">
+                    <h2>Input</h2>
+                    <div class="content">
+                        {{problem.input}}
+                    </div>
+                </div>
+                
+                <hr>
+                <div class="output">
+                    <h2>Output</h2>
+                    <div class="content">
+                        {{problem.output}}
+                    </div>
+                </div>
+                
+                <hr>
+                <div class="constraint">
+                    <h2>Constraint</h2>
+                    <div class="content">
+                        {{problem.constraint}}
+                    </div>
+                </div>
+                
+                <hr>
+                <div class="sampleInput">
+                    <h2>Sample Input</h2>
+                    <div class="content">
+                        {{problem.sampleInput}}
+                    </div>
+                </div>
+                
+                <hr>
+                <div class="sampleOutput">
+                    <h2>Sample Output</h2>
+                    <div class="content">
+                        {{problem.sampleOutput}}
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="two" id="second" style="width: 30%;">
+
+            </section>
+        </div>
+    </div>
+{% endblock body %}

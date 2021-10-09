@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    login
+{% endblock title %}
+
+{% block body %}
+    <link rel="stylesheet" href="/static/css/auth/login.css">
+    
+    <div class="login-background">
+        {% include 'message.html' %}
+        <div class="whole-form">
+            <strong><h2 class="signup-head">Login</h2></strong>
+            <form class="signup-form" action="/login" method="POST">
+
+                <div class="row mb-4">
+                <label for="uname" class="col-sm-4 col-form-label">Username</label>
+                <div class="col-sm-15">
+                    <input type="text" name="user_name" class="form-control" id="uname" required>
+                </div>
+                </div>
+
+                <div class="row mb-4">
+                <label for="password" class="col-sm-4 col-form-label">Password</label>
+                <div class="col-sm-15">
+                    <input type="password" class="form-control" name="password" id="password" required>
+                </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary col-sm-5 mb-4 form-button">Log in</button>
+            </form>
+            <div class="bottom-form" style="text-align:center;">New to Code Arena? <a href="/signup">create an account</a></div>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock body %}

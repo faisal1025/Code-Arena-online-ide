@@ -1,0 +1,38 @@
+
+.login-background{
+    background-image: url("/static/assets/login-background.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: fit-content; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    padding: 3rem;
+}
+
+.whole-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #cec6c6;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 2rem;
+    width: fit-content;
+    background-color: antiquewhite;
+    opacity: 0.8;
+}
+
+.signup-form{
+    width: auto;
+}
+
+h2#signup-heading{
+    color: teal;
+}
+
+.form-button{
+    margin: auto;
+    display: block;
+    width: -webkit-fill-available;
+}
