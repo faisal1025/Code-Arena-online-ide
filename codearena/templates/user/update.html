@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    signup
+    update form
 {% endblock title %}
 
 {% block body %}
@@ -11,43 +11,23 @@
 <div class="signup-background">
   {% include 'message.html' %}
     <div class=" whole-form">
-        <strong><h2 class="m-4" id="signup-heading">Sign-Up</h2></strong>
-        <form class="signup-form m-4" action="/signup" method="POST">
-    
-            <div class="row mb-4">
-              <label for="uname" class="col-sm-4 col-form-label">User Name</label>
-              <div class="col-sm-15">
-                <input type="text" name="user_name" class="form-control" id="uname" required>
-              </div>
-            </div>
+        <strong><h2 class="m-4" id="signup-heading">Update</h2></strong>
+        <form class="signup-form m-4" action="/update" method="POST">
     
             <div class="row mb-4">
               <label for="fullname" class="col-sm-4 col-form-label">Full Name</label>
               <div class="col-sm-15">
-                <input type="text" name="full_name" class="form-control" id="fullname" required>
+                <input type="text" name="full_name" value="{{session.name}}" class="form-control" id="fullname" required>
               </div>
             </div>
     
             <div class="row mb-4">
               <label for="email" class="col-sm-4 col-form-label">Email</label>
               <div class="col-sm-15">
-                <input type="email" class="form-control" name="email" id="email" required>
+                <input type="email" class="form-control" value="{{session.email}}" name="email" id="email" required>
               </div>
             </div>
     
-            <div class="row mb-4">
-              <label for="password" class="col-sm-4 col-form-label">Password</label>
-              <div class="col-sm-15">
-                <input type="password" class="form-control" name="password" id="password" required>
-              </div>
-            </div>
-
-            <div class="row mb-4">
-              <label for="confpassword" class="col-sm-8 col-form-label">Confirm Password</label>
-              <div class="col-sm-15">
-                <input type="password" class="form-control" name="confpassword" id="confpassword" required>
-              </div>
-            </div>
     
             <fieldset class="row mb-4">
               <legend class="col-form-label col-sm-4 pt-0">Gender</legend>
@@ -74,9 +54,9 @@
             </fieldset>
     
             <div class="row mb-4">
-              <label for="city" class="col-sm-4 col-form-label">City</label>
+              <label for="city" class="col-sm-4 col-form-label">Country</label>
               <div class="col-sm-15">
-                <input type="text" class="form-control" name="country" id="city" required>
+                <input type="text" class="form-control" value="{{session.country}}" name="country" id="city" required>
               </div>
             </div>
     
@@ -107,7 +87,7 @@
             <div class="row mb-4">
               <label for="work" class="col-sm-8 col-form-label">College/Company</label>
               <div class="col-sm-15">
-                <input type="text" class="form-control" name="work" id="work" required>
+                <input type="text" class="form-control" value="{{session.education}}" name="work" id="work" required>
               </div>
             </div>
     
@@ -126,9 +106,9 @@
               </div>
             </div>
     
-            <button type="submit" class="btn btn-primary ">Sign up</button>
+            <button type="submit" class="btn btn-primary ">Update</button>
         </form>
-        <div class="bottom-form m-4" style="text-align:center;">Already have an account? <a href="/login">Login</a></div>
+        <!-- <div class="bottom-form m-4" style="text-align:center;">Already have an account? <a href="/login">Login</a></div> -->
       </div>
 
 </div>

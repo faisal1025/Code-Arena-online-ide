@@ -1,5 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 import os
+from datetime import datetime
 from codearena import app
 from dotenv import load_dotenv
 
@@ -24,7 +25,9 @@ class User(db.Model):
     college = db.Column('college', db.String(50), nullable = False)
     occupation = db.Column('profession', db.String(50), nullable = False)
     language = db.Column('languages', db.String(50), nullable = False)
-    city = db.Column('city', db.String(50), nullable = False)
+    country = db.Column('country', db.String(50), nullable = False)
+    pic = db.Column('pic', db.LargeBinary, nullable = False)
+    
 
 class Problems(db.Model):
     __tablename__ = "problems"
@@ -36,4 +39,4 @@ class Problems(db.Model):
     constraint = db.Column('problem constraint', db.String(50), nullable = False)
     sampleInput = db.Column('sample input', db.String(50), nullable = False)
     sampleOutput = db.Column('sample output', db.String(50), nullable = False)
-    date = db.Column('date', db.String(10), nullable = False)
+    date = db.Column('date', db.DateTime, nullable = False, default=datetime.utcnow)

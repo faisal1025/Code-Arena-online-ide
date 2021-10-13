@@ -6,14 +6,15 @@
 
 {% block body %}
 <link rel="stylesheet" href="/static/css/practice/question.css">
+<div class="container">
 
     <div class="main-body">
-        <div class="container">
+        <div class="main-content">
             <h1 class="questitle">{{problem.name}}
                 <span style="font-size:small;">
                     Problem code : <strong>{{problem.code}}</strong>
                 </span>
-                <a href="/" type="button" class="btn btn-primary" style="float: right;">Submit</a>
+                <a href="/submitques" type="button" class="btn btn-primary" style="float: right;">Submit</a>
             </h1>
             <hr>
             <section class="one" id="first" style="width: 70%;">
@@ -68,8 +69,10 @@
             </section>
 
             <section class="two" id="second" style="width: 30%;">
-
+                
             </section>
         </div>
     </div>
+</div>
+
 {% endblock body %}

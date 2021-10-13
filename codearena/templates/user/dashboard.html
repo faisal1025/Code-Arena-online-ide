@@ -7,40 +7,54 @@
 {% block body %}
 <link rel="stylesheet" href="/static/css/user/dashboard.css">
 
-    <div class="container">
-        {% include 'message.html' %}
-        <div class="layout1">
-            <section class="left">
-                <label for="image" id="img">
-                    <i class="fas fa-camera" style="margin: 7rem;"></i>
-                </label>
-                <input type="file"  name="img" id="image" >
-            </section>
-            <section class="right">
-                <h2>{{session.name}}</h2>
-                <div class="college mb-2">
-                    <!-- {% if session.occupation == 'student' %} -->
-                        <i class="fas fa-university"></i>
-                        Studing at {{session.education}}                    
-                    <!-- {% else %} -->
-
-                    <!-- {% endif %} -->
-                </div>
-                <div class="user-details">
-                    
+<div class="container">
+    {% include 'message.html' %}
+    <div class="main-body">
+        <div class="main-content">
+            <div class="layout1">
+                <section class="left">
+                    <form action="/myAccount" method="post" class="fourm" enctype="multipart/form-data">
+                        {% if 'pic' in session %}
+                        <img src="/static/defaultProfile/{{session.pic}}" class="photo"/>    
+                        {% else %}
+                        <img src="/static/defaultProfile/anonymous-user.png" class="photo"/>
+                        {% endif %}
+                        <input type="file" name="pic" id="image" class="mt-3" required>
+                        <button class="btn btn-sm btn-primary mt-3 form-button">Upload New Profile</button>
+                    </form>
+                </section>
+                <section class="right">
+                    <div class="float-right">
+                        <a href="/update" class="btn btn-sm btn-outline-primary mt-3 form-button">Edit Profile</a>
+                        <a href="/deleteAccount" class="btn btn-sm btn-outline-primary mt-3 form-button">Delete Account</a>
+                    </div>
+                    <h2 class="uppercase">{{session.name}}</h2>
+                    <div class="college mb-2">
+                        <!-- {% if session.occupation == 'student' %} -->
+                            <i class="fas fa-university"></i>
+                            Studing at {{session.education}}                    
+                        <!-- {% else %} -->
+                        
+                        <!-- {% endif %} -->
+                    </div>
+                    <div class="user-details">
+                        
                         <div class="skills mb-2">
-                            <label class="col-sm-2" for="skill">Skills: </label>
-                            <span class="value">{{session.language}}</span>
+                                <label class="col-sm-2" for="skill">Skills: </label>
+                                <span class="value">{{session.language}}</span>
+                            </div>
+                            
+                            <div class="education">
+                                <label class="col-sm-2" for="education">Education: </label>
+                                <span class="value">{{session.education}}</span>
+                            </div>
                         </div>
                         
-                        <div class="education">
-                            <label class="col-sm-2" for="education">Education: </label>
-                            <span class="value">{{session.education}}</span>
-                        </div>
+                    </section>
                 </div>
 
-            </section>
+            </div>
+            
         </div>
-
-    </div>
-{% endblock body %}
+</div>
+        {% endblock body %}

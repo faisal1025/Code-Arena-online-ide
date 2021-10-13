@@ -6,9 +6,11 @@
 
 {% block body %}
 <link rel="stylesheet" href="/static/css/practice/practice.css">
-    <div class="main-body">
+<div class="container">
 
-        <div class="container main-content">
+    <div class="main-body">
+        
+        <div class="main-content">
             <section class="first">
                 <table style="width: 100%;">
                     <tr>
@@ -16,21 +18,25 @@
                         <th>Code</th>
                         <th>Successful Submission</th>
                     </tr>
-    
+                    
                     {% for problem in problems %}
-                        <tr>
-                            <td><a href="/practice/{{problem.code}}">{{problem.name}}</a></td>
-                            <td>{{problem.code}}</td>
-                            <td>0</td>
-                        </tr>
+                    <tr>
+                        <td><a href="/practice/{{problem.code}}">{{problem.name}}</a></td>
+                        <td>{{problem.code}}</td>
+                        <td>0</td>
+                    </tr>
                     {% endfor %}
                     
                 </table>
-
+                
             </section>
-
+            <section class="second">
+                
+            </section>
+            
         </div>
     </div>    
-
-
+    
+</div>
+    
 {% endblock body %}

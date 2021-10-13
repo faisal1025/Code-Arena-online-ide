@@ -1,17 +1,23 @@
 /* ----------------------------------main-section-----------------------------------*/
 .layout1{
-    border: 2px solid grey;
     display: flex;
-    border-radius: 1rem;
     padding: 1rem;
 }
 
 /* ------------------------------------left------------------------------------------ */
 .left{
-    width: 19rem;
+    width: 18rem;
+    border-right: 2px solid #7c603c;
+    padding: inherit;
 }
 
-.left #img{
+.left .fourm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left .photo{
     height: 15rem;
     width: 15rem;
     border: 2px solid grey;
@@ -20,18 +26,18 @@
     margin: auto;
 }
 
-.left #img:hover{
-    background-color: lightslategray;
-}
 
 .left #image{
-    display: none;
-    visibility: hidden;
+    width: 13rem;
 }
 
+.left .photo:hover{
+    opacity: 0.7;
+}
 /* -----------------------------------right-------------------------------------- */
 .right{
     padding: inherit;
+    width: -webkit-fill-available;
 }
 
 .right h2{

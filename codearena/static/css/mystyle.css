@@ -115,3 +115,26 @@ img.made-icon{
     width: 22px;
 }
 
+.uppercase{
+    text-transform: uppercase;
+}
+
+.lowercase{
+    text-transform: lowercase;
+}
+
+.float-right{
+    float: right;
+}
+
+.main-body{
+    margin: 4rem 0rem 4rem 0rem;
+    border: 2px solid grey;
+    border-radius: 1rem;
+}
+
+.main-content{
+    min-height: fit-content;
+    padding: 1rem;
+}
+
